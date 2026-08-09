@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Grandpa's Math Academy</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f5f7ff;color:#20243a}header{background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;text-align:center;padding:32px 16px}h1{margin:8px 0}nav{background:#fff;padding:10px;text-align:center;position:sticky;top:0;z-index:2;box-shadow:0 2px 8px #0002}button{border:0;border-radius:10px;padding:10px 14px;margin:4px;cursor:pointer;font-weight:bold;color:#4338ca;background:#eef2ff}.lang{background:#fff;color:#4338ca}.page{max-width:950px;margin:auto;padding:18px}.card{background:#fff;border-radius:18px;padding:22px;margin:18px 0;box-shadow:0 6px 20px #0001}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}.lesson{border:1px solid #ddd;border-radius:14px;padding:16px}.hidden{display:none}.box{background:#f4f6ff;padding:14px;border-left:5px solid #4f46e5;border-radius:9px}.hero{font-size:18px}.zh{display:block;color:#555;margin-top:5px}footer{text-align:center;padding:25px;color:#666}
+</style>
+</head>
+<body>
+<header>
+<div style="font-size:44px">🧮📚</div>
+<h1 data-en="Grandpa's Math Academy" data-zh="爷爷的数学课堂">Grandpa's Math Academy</h1>
+<p data-en="Learn math together, even from far away." data-zh="即使相隔很远，也可以一起学习数学。">Learn math together, even from far away.</p>
+<button class="lang" onclick="setLang('en')">🇺🇸 English</button>
+<button class="lang" onclick="setLang('zh')">🇨🇳 中文</button>
+</header>
+<nav>
+<button onclick="show('home')" data-en="🏠 Home" data-zh="🏠 首页">🏠 Home</button>
+<button onclick="show('lessons')" data-en="📚 Lessons" data-zh="📚 课程">📚 Lessons</button>
+<button onclick="show('practice')" data-en="✏️ Practice" data-zh="✏️ 练习">✏️ Practice</button>
+<button onclick="show('homework')" data-en="📝 Homework" data-zh="📝 作业">📝 Homework</button>
+<button onclick="show('live')" data-en="🎥 Live Class" data-zh="🎥 在线课堂">🎥 Live Class</button>
+</nav>
+
+<section id="home" class="page">
+<div class="card hero">
+<h2 data-en="Welcome! 👋" data-zh="欢迎！👋">Welcome! 👋</h2>
+<p data-en="This is your special online classroom for learning math with Grandpa."
+data-zh="这是你和爷爷一起学习数学的专属在线课堂。">This is your special online classroom for learning math with Grandpa.</p>
+<p data-en="Goal: Understand the steps, practice, and become more confident."
+data-zh="目标：理解步骤，多练习，变得更有信心。">Goal: Understand the steps, practice, and become more confident.</p>
+</div>
+<div class="card">
+<h2 data-en="🌟 How it works" data-zh="🌟 如何使用">🌟 How it works</h2>
+<div class="grid">
+<div><h3>1️⃣ <span data-en="Learn" data-zh="学习">Learn</span></h3><p data-en="Grandpa teaches a new idea." data-zh="爷爷讲解新的数学知识。">Grandpa teaches a new idea.</p></div>
+<div><h3>2️⃣ <span data-en="Practice" data-zh="练习">Practice</span></h3><p data-en="Try problems by yourself." data-zh="自己尝试做题。">Try problems by yourself.</p></div>
+<div><h3>3️⃣ <span data-en="Ask" data-zh="提问">Ask</span></h3><p data-en="Ask Grandpa when you get stuck." data-zh="遇到不会的问题就问爷爷。">Ask Grandpa when you get stuck.</p></div>
+</div>
+</div>
+</section>
+
+<section id="lessons" class="page hidden">
+<div class="card"><h2 data-en="📚 Math Lessons" data-zh="📚 数学课程">📚 Math Lessons</h2>
+<div class="grid">
+<div class="lesson"><h3 data-en="Fractions" data-zh="分数">Fractions</h3><p data-en="Adding, subtracting, multiplying, and dividing fractions." data-zh="学习分数的加、减、乘、除。">Adding, subtracting, multiplying, and dividing fractions.</p></div>
+<div class="lesson"><h3 data-en="Integers" data-zh="整数">Integers</h3><p data-en="Positive and negative numbers." data-zh="学习正数和负数。">Positive and negative numbers.</p></div>
+<div class="lesson"><h3 data-en="Equations" data-zh="方程">Equations</h3><p data-en="Solve for x step by step." data-zh="一步一步解 x。">Solve for x step by step.</p></div>
+<div class="lesson"><h3 data-en="Geometry" data-zh="几何">Geometry</h3><p data-en="Angles, area, perimeter, and volume." data-zh="学习角度、面积、周长和体积。">Angles, area, perimeter, and volume.</p></div>
+</div></div>
+</section>
+
+<section id="practice" class="page hidden">
+<div class="card"><h2 data-en="✏️ Practice" data-zh="✏️ 练习">✏️ Practice</h2>
+<ol>
+<li>3/4 + 1/8 = ?</li><li>-7 + 12 = ?</li><li>3x + 5 = 20. Find x.</li><li>8 × 5 = ?</li>
+</ol>
+<button onclick="document.getElementById('answers').classList.toggle('hidden')" data-en="Show / Hide Answers" data-zh="显示 / 隐藏答案">Show / Hide Answers</button>
+<div id="answers" class="box"><strong data-en="Answers:" data-zh="答案：">Answers:</strong> 7/8, 5, x = 5, 40</div>
+</div>
+</section>
+
+<section id="homework" class="page hidden">
+<div class="card"><h2 data-en="📝 Homework" data-zh="📝 作业">📝 Homework</h2>
+<div class="box" data-en="Grandpa can put worksheets and assignments here."
+data-zh="爷爷可以把练习纸和作业放在这里。">Grandpa can put worksheets and assignments here.</div>
+</div></section>
+
+<section id="live" class="page hidden">
+<div class="card"><h2 data-en="🎥 Live Class With Grandpa" data-zh="🎥 和爷爷在线上课">🎥 Live Class With Grandpa</h2>
+<p data-en="Grandpa can put the video-call link here."
+data-zh="爷爷可以把视频通话链接放在这里。">Grandpa can put the video-call link here.</p>
+<input id="link" style="width:95%;padding:12px;border-radius:9px;border:1px solid #ccc" placeholder="Paste meeting link here">
+<br><br><button onclick="openLink()" data-en="Join Class" data-zh="进入课堂">Join Class</button>
+</div></section>
+
+<footer data-en="Grandpa's Math Academy ❤️" data-zh="爷爷的数学课堂 ❤️">Grandpa's Math Academy ❤️</footer>
+<script>
+let lang='en';
+function setLang(x){lang=x;document.querySelectorAll('[data-en]').forEach(e=>e.textContent=e.getAttribute('data-'+x));document.querySelectorAll('[data-zh]').forEach(e=>e.textContent=e.getAttribute('data-'+x));document.documentElement.lang=x==='zh'?'zh':'en'}
+function show(id){document.querySelectorAll('.page').forEach(e=>e.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');scrollTo(0,0)}
+function openLink(){let x=document.getElementById('link').value.trim();if(x) location.href=x;else alert(lang==='zh'?'请先输入课堂链接。':'Please paste the class link first.')}
+</script>
+</body></html>
